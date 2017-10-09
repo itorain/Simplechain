@@ -1,0 +1,31 @@
+{
+  "name": "simplechain",
+  "version": "1.0.0",
+  "description": "Simple block chain implementation using node",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow",
+    "flow:check": "flow check ./src/",
+    "flow:build": "flow-remove-types ./src/ -d ./lib/ --all --pretty",
+    "lint": "./node_modules/eslint/bin/eslint.js --ext .js ./src/",
+    "build": "flow check && lint && flow:build && test",
+    "dev": "watch --wait=1 'flow-remove-types src/ -d lib/ --all --pretty' ./src/ & nodemon ./lib/",
+    "start": "npm run flow:build && node ./lib/",
+    "test": "echo \"Error: no test specified\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "flow-bin": "^0.56.0",
+    "flow-remove-types": "^1.2.1",
+    "flow-typed": "^2.2.0",
+    "nodemon": "^1.12.1",
+    "watch": "^1.0.2"
+  }
+}

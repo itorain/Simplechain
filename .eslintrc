@@ -1,0 +1,23 @@
+// .eslintrc
+
+{
+  "env": {
+    "browser": false
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "flowtype"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+      "indent": ["error", 4]
+  }
+}
