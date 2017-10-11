@@ -8,7 +8,7 @@
     "flow:check": "flow check ./src/",
     "flow:build": "flow-remove-types ./src/ -d ./lib/ --all --pretty",
     "lint": "./node_modules/eslint/bin/eslint.js --ext .js ./src/",
-    "build": "flow check && lint && flow:build && test",
+    "build": "flow check && npm run lint && npm run flow:build && npm run test",
     "dev": "watch --wait=1 'flow-remove-types src/ -d lib/ --all --pretty' ./src/ & nodemon ./lib/",
     "start": "npm run flow:build && node ./lib/",
     "test": "echo \"Error: no test specified\""
@@ -27,5 +27,8 @@
     "flow-typed": "^2.2.0",
     "nodemon": "^1.12.1",
     "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
   }
 }

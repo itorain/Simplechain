@@ -18,6 +18,13 @@
     }
   },
   "rules": {
-      "indent": ["error", 4]
+      "indent": ["error", 4],
+      "comma-dangle": ["error", {
+        "arrays": "always",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+    }]
   }
 }

@@ -1,4 +1,5 @@
 // @flow
+// Crappy Block class implementation
 
 class Block {
     index: number;
@@ -12,7 +13,7 @@ class Block {
         previousHash: string,
         timestamp: number,
         data: Object,
-        hash: string,
+        hash: string
     ) {
         this.index = index;
         this.previousHash = previousHash;
@@ -26,3 +27,5 @@ class Block {
         return JSON.stringify(`{ index: ${this.index}, previousHash: ${this.previousHash}, timestamp: ${this.timestamp}, data: ${dataStr}, hash: ${this.hash}}`);
     }
 }
+
+module.exports = Block;
